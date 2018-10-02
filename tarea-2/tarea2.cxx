@@ -1,6 +1,7 @@
-/* Tarea 2. Raúl Valentín Cortez Ares CA16007. Realizar un programa que utilizando funciones
- * definidas por el usuario calcule la cantidad de números perfectos en el siguiente rango
- * de valores de 0 a 1000.
+/*
+ * Tarea 2. Raúl Valentín Cortez Ares CA16007. Realizar un programa que utilizando funciones
+ * definidas por el usuario calcule la cantidad de números perfectos en un rango establecido
+ * por el usuario.
  */
 
 #include <iostream>
@@ -11,8 +12,11 @@ unsigned int total_perfectos(unsigned int x);
 unsigned int suma_divisores(unsigned int x);
 
 int main(){
-   cout << "El total de números perfectos hasta 1000 es " << total_perfectos(1000) << ".\n";
-   return 0;
+	unsigned int n;
+	cout << "Ingrese un número no negativo menor que 4294967296: ";
+	cin >> n;
+	cout << "El total de números perfectos hasta " << n << " es " << total_perfectos(n) << ".\n";
+	return 0;
 }
 
 /*
